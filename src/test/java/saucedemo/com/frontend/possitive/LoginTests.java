@@ -1,6 +1,7 @@
 package saucedemo.com.frontend.possitive;
 
 import org.testng.annotations.Test;
+import saucedemo.com.frontend.BaseTest;
 import saucedemo.com.frontend.assertions.Verify;
 import saucedemo.com.frontend.components.cart.Cart;
 import saucedemo.com.frontend.utils.Item;
@@ -8,7 +9,7 @@ import saucedemo.com.pages.frontend.Login;
 import saucedemo.com.pages.frontend.components.Header;
 import saucedemo.com.utils.Checkout;
 
-public class LoginTests {
+public class LoginTests extends BaseTest {
 
 
     @Test
@@ -37,6 +38,6 @@ public class LoginTests {
         Checkout.checkout();
         Verify.successfulCheckOut("Checkout: Your Information", "epic fail xD");
     }
-    
+
 
 }
