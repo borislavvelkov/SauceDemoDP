@@ -1,10 +1,11 @@
 package saucedemo.com.frontend.negative;
 
 import org.testng.annotations.Test;
+import saucedemo.com.frontend.BaseTest;
 import saucedemo.com.frontend.errormessages.AuthenticationErrorMessage;
 import saucedemo.com.pages.frontend.Login;
 
-public class LoginTests {
+public class LoginTests extends BaseTest {
 //    @BeforeMethod
 //    public void setup() {
 //        Browser.open();
