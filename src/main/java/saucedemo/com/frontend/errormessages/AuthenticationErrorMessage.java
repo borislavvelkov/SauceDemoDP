@@ -18,8 +18,7 @@ public class AuthenticationErrorMessage {
      * @param messageOnFailure the message that will appear in your reports in case of test failure
      */
    public static void verifyAuthenticationErrorMessage(String expectedErrorMessageText, String messageOnFailure) {
-  //     Webelement actualAuthenticationErrorMessage = WaitTool.waitForElementPresent(driver, By.cssSelector(".error-button"), 10);
-//       String actualAuthenticationErrorMessage = String.valueOf(Browser.driver.findElement(By.cssSelector("error-button")));
-//       Assert.assertEquals(actualAuthenticationErrorMessage, "Epic sadface: Username and password do not match any user in this service", "the test failed because the actual and expected text did not match");
+       String actualAuthenticationErrorMessage = Browser.driver.findElement(By.cssSelector("div.error-message-container.error h3")).getText();
+       Assert.assertEquals(actualAuthenticationErrorMessage, "Epic sadface: Username and password do not match any user in this service", "the test failed because the actual and expected text did not match");
    }
 }
