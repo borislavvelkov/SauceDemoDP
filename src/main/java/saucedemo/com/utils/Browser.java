@@ -2,9 +2,7 @@ package saucedemo.com.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
-
 public class Browser {
 
     public static WebDriver driver;
