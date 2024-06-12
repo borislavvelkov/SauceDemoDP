@@ -6,10 +6,6 @@ import saucedemo.com.frontend.errormessages.AuthenticationErrorMessage;
 import saucedemo.com.pages.frontend.Login;
 
 public class LoginTests extends BaseTest {
-//    @BeforeMethod
-//    public void setup() {
-//        Browser.open();
-//    }
 
     @Test
     public void loggingWithInvalidUserName() {
@@ -19,10 +15,5 @@ public class LoginTests extends BaseTest {
                 verifyAuthenticationErrorMessage
                         ( "expectedErrorMessageText", "messageOnFailure");
     }
-
-//    @AfterMethod
-//    public void tearDown() {
-//        Browser.quit();
-//    }
 }
 
