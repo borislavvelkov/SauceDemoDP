@@ -16,4 +16,14 @@ public class Verify {
         String actualCheckedOut = Browser.driver.findElement(By.cssSelector(".title")).getText();
         Assert.assertEquals(actualCheckedOut, "Checkout: Your Information", "the text did not match and your test failed");
     }
+
+    public static void orderCompleted() {
+        String actualCompletion = Browser.driver.findElement(By.cssSelector(".title")).getText();
+        Assert.assertEquals(actualCompletion, "Checkout: Complete!", "the text did not match and your test failed");
+    }
+
+    public static void completeOrderWithoutName() {
+        String actualErrorMessageRequestingFirstName = Browser.driver.findElement(By.cssSelector(".error-message-container")).getText();
+        Assert.assertEquals(actualErrorMessageRequestingFirstName, "Error: First Name is required\n", "the text did not match and your test failed");
+    }
 }
