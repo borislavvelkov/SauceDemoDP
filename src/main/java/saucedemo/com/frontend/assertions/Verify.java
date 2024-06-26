@@ -21,4 +21,9 @@ public class Verify {
         String actualCompletion = Browser.driver.findElement(By.cssSelector(".title")).getText();
         Assert.assertEquals(actualCompletion, "Checkout: Complete!", "the text did not match and your test failed");
     }
+
+    public static void completeOrderWithoutName() {
+        String actualErrorMessageRequestingFirstName = Browser.driver.findElement(By.cssSelector(".error-message-container")).getText();
+        Assert.assertEquals(actualErrorMessageRequestingFirstName, "Error: First Name is required\n", "the text did not match and your test failed");
+    }
 }
