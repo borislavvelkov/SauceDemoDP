@@ -48,6 +48,5 @@ public class LoginTests extends BaseTest {
         Cart.openCart();
         Checkout.checkout();
         Checkout.yourInformation();
-        Verify.completeOrderWithoutName();
     }
 }

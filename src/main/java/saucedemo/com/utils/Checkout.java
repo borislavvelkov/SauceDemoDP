@@ -24,4 +24,16 @@ public class Checkout {
         Browser.driver.findElement(By.id("postal-code")).sendKeys("1234");
         Browser.driver.findElement(By.id("continue")).click();
     }
+
+    public static void checkoutWithoutFamily() {
+        Browser.driver.findElement(By.id("first-name")).sendKeys("Borislav");
+        Browser.driver.findElement(By.id("postal-code")).sendKeys("1234");
+        Browser.driver.findElement(By.id("continue")).click();
+    }
+
+    public static void checkingOutWithoutPostalCode() {
+        Browser.driver.findElement(By.id("first-name")).sendKeys("Borislav");
+        Browser.driver.findElement(By.id("last-name")).sendKeys("Velkov");
+        Browser.driver.findElement(By.id("continue")).click();
+    }
 }
