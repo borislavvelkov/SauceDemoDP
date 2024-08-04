@@ -40,4 +40,13 @@ public class LoginTests extends BaseTest {
     }
 
 
+    @Test
+    public void completeCheckout() {
+        Login.navigate();
+        Login.login("standard_user", "secret_sauce");
+        Item.addToBag();
+        Cart.openCart();
+        Checkout.checkout();
+        Checkout.yourInformation();
+    }
 }

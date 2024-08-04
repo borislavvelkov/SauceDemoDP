@@ -16,4 +16,24 @@ public class Verify {
         String actualCheckedOut = Browser.driver.findElement(By.cssSelector(".title")).getText();
         Assert.assertEquals(actualCheckedOut, "Checkout: Your Information", "the text did not match and your test failed");
     }
+
+    public static void orderCompleted() {
+        String actualCompletion = Browser.driver.findElement(By.cssSelector(".title")).getText();
+        Assert.assertEquals(actualCompletion, "Checkout: Complete!", "the text did not match and your test failed");
+    }
+
+    public static void completeOrderWithoutName( String expectedErrorMessageWithoutName,String messageOnFailure) {
+        String actualErrorMessageRequestingFirstName = Browser.driver.findElement(By.cssSelector(".error-message-container")).getText();
+        Assert.assertEquals(actualErrorMessageRequestingFirstName, "Error: First Name is required", "the text did not match and your test failed");
+    }
+
+    public static void completeOrderWithoutFamily(String expectedErrorMessageWithoutFamily, String meesageOnFailure) {
+        String actualErrorMessageRequestingFamily = Browser.driver.findElement(By.cssSelector(".error-message-container")).getText();
+        Assert.assertEquals(actualErrorMessageRequestingFamily, "Error: Last Name is required", "the text did not match and your test failed");
+    }
+
+    public static void completeOrderWithoutPostalCode(String expectedErrorMessageWithoutPostalCode, String messageOnFailure) {
+        String actualErrorMessageRequestingPostalCode = Browser.driver.findElement(By.cssSelector(".error-message-container")).getText();
+        Assert.assertEquals(actualErrorMessageRequestingPostalCode, "Error: Postal Code is required", "the text did not match and your test failed");
+    }
 }
